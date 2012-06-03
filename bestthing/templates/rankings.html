@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Best Thing{% endblock %}
+{% block content %}
+	<h1>These Things Are The Best!</h1>
+	<ol>
+		{% for thing in things %}
+			<li>{{ thing|safe }}</li>
+		{% endfor %}
+	</ol>
+	<a href="/">Rate things</a>
+{% endblock %}

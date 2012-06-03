@@ -1,0 +1,9 @@
+Flask==0.8
+Jinja2==2.6
+Werkzeug==0.8.3
+ez-setup==0.9
+hiredis==0.1.1
+redis==2.4.13
+smartypants==1.6.0.3
+titlecase==0.5.1
+wsgiref==0.1.2

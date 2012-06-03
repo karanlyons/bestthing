@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Best Thing{% endblock %}
+{% block content %}
+	<h1>Which is Better?</h1>
+	<form id="vote" method="post" action="/">
+		<input name="csrf_token" value="{{ csrf_token|safe }}" type="hidden" />
+		<input name="thing1" value="{{ thing1|safe }}" type="hidden" />
+		<input name="thing2" value="{{ thing2|safe }}" type="hidden" />
+		<input id="left" name="1" type="submit" value="{{ thing1|safe }}" />
+		<span id="or">or</span>
+		<input id="right" name="2" type="submit" value="{{ thing2|safe }}" />
+	</form>
+	<form id="contribute" method="post" action "/">
+		<input name="csrf_token" value="{{ csrf_token|safe }}" type="hidden" />
+		<input name="description" type="text" placeholder="Add your own thing" value="" maxlength="250" />
+		<input id="add" name="add" type="submit" value="Add it!" />
+	</form>
+	<a href="/rankings/">The best things</a>
+{% endblock %}
